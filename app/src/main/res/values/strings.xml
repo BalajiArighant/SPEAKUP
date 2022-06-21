@@ -13,7 +13,7 @@
     <string name="Home" translatable="false">Home</string>
     <string name="today_s_workout" translatable="false">TODAY\'S WORKOUT</string>
     <string name="start_workout" translatable="false">START WORKOUT</string>
-    <string name="title_activity_play_game">Memory WOD</string>
+    <string name="title_activity_play_game">Memory Match</string>
     <string name="numberOfTries">Tries: </string>
     <string name="title_activity_add_high_score">Save Score</string>
     <string name="title_activity_view_scores">Scores</string>

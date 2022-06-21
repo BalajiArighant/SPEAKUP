@@ -3,6 +3,7 @@ package com.example.speakup.org.uncopyrightedapps.games.memory_wod.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,10 +12,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 
 import com.example.speakup.R;
 import com.example.speakup.org.uncopyrightedapps.games.memory_wod.data.GameDAO;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity  {
 
     protected View mView;
     private Graphic currentGraphics;
+    private boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +84,20 @@ public class MainActivity extends AppCompatActivity  {
         initGraphicsSpinner();
     }
 
-
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+        }
+        if (getSupportFragmentManager().getBackStackEntryCount() != 0) {
+            String title = getSupportFragmentManager().getFragments().get(getSupportFragmentManager().getBackStackEntryCount() - 1).getTag();
+            super.onBackPressed();
+        } else {
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, getResources().getString(R.string.Please_click_BACK_again_to_exit), Toast.LENGTH_SHORT).show();
+            new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
+        }
+    }
 
     private void initGraphicsSpinner() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
