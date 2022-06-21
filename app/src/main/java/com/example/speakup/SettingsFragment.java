@@ -1,28 +1,36 @@
-
-
 package com.example.speakup;
+
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.fragment.app.Fragment;
 
-import android.view.WindowManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 
-public class SettingsFragment extends AppCompatActivity{
+public class SettingsFragment extends Fragment {
 
-    AppCompatButton logout_button;
+    AppCompatButton log_out,cus_details;
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        logout_button.setOnClickListener(view ->{
-            startActivity(new Intent(SettingsFragment.this, Login.class));
+        log_out = view.findViewById(R.id.logout_button);
+        cus_details = view.findViewById(R.id.contactinfo);
+
+        log_out.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(), Login.class);
+            startActivity(intent);
         });
 
-    }
+
+        return view;
 
     }
+}

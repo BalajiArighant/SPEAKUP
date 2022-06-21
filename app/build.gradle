@@ -53,5 +53,6 @@ dependencies {
     implementation 'com.github.duanhong169:colorpicker:1.1.6'
     implementation 'com.github.duanhong169:checkerboarddrawable:1.0.2'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
 
 }

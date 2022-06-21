@@ -8,7 +8,8 @@ import android.view.WindowManager;
 
 public class settings extends AppCompatActivity{
 
-        AppCompatButton logout_button;
+        AppCompatButton logout_button,contact_info;
+
 
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -16,6 +17,10 @@ public class settings extends AppCompatActivity{
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
             logout_button.setOnClickListener(view ->{
+                startActivity(new Intent(com.example.speakup.settings.this, Login.class));
+            });
+
+            contact_info.setOnClickListener(view ->{
                 startActivity(new Intent(com.example.speakup.settings.this, Login.class));
             });
 

@@ -16,7 +16,7 @@
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.296195652173913" />
         <entry key="app/src/main/res/layout/activity_drawing.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/activity_gamelayout.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_homescreen.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/activity_homescreen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_homescreenlayout.xml" value="0.25679347826086957" />
         <entry key="app/src/main/res/layout/activity_introductory.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2708333333333333" />
@@ -31,7 +31,7 @@
         <entry key="app/src/main/res/layout/color_adapter.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/dialog.xml" value="0.2234375" />
         <entry key="app/src/main/res/layout/fragment_game.xml" value="0.2708333333333333" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_speaking.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/fragment_stat.xml" value="0.2708333333333333" />
