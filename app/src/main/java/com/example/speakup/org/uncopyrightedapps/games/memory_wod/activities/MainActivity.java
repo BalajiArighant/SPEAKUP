@@ -4,8 +4,6 @@ package com.example.speakup.org.uncopyrightedapps.games.memory_wod.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -13,11 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 
 import com.example.speakup.R;
 import com.example.speakup.org.uncopyrightedapps.games.memory_wod.data.GameDAO;
@@ -35,8 +29,9 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         mView = findViewById(R.id.mainLayout);
         Button mNoBrainButton = (Button) findViewById(R.id.noBrainButton);
@@ -95,7 +90,7 @@ public class MainActivity extends AppCompatActivity  {
         } else {
             this.doubleBackToExitPressedOnce = true;
             Toast.makeText(this, getResources().getString(R.string.Please_click_BACK_again_to_exit), Toast.LENGTH_SHORT).show();
-            new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
+            new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 1000);
         }
     }
 

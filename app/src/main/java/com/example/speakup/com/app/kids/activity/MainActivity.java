@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             } else {
                 this.doubleBackToExitPressedOnce = true;
                 Toast.makeText(this, getResources().getString(R.string.Please_click_BACK_again_to_exit), Toast.LENGTH_SHORT).show();
-                new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
+                new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 1000);
             }
         }
     }

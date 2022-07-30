@@ -29,6 +29,11 @@ public class SettingsFragment extends Fragment {
             startActivity(intent);
         });
 
+        cus_details.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(), Contact.class);
+            startActivity(intent);
+        });
+
 
         return view;
 

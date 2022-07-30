@@ -35,11 +35,13 @@ public class gamelayout extends AppCompatActivity {
         memory_speed.animate().translationY(0).alpha(1).setDuration(800).setStartDelay(400).start();
 
         memory_match.setOnClickListener(view -> {
-            startActivity(new Intent(gamelayout.this, com.example.speakup.org.uncopyrightedapps.games.memory_wod.activities.MainActivity.class));
+            Intent intent = new Intent(this, com.example.speakup.org.uncopyrightedapps.games.memory_wod.activities.MainActivity.class);
+            startActivity(intent);
         });
 
         memory_speed.setOnClickListener(view -> {
-            startActivity(new Intent(gamelayout.this, com.example.speakup.com.app.kids.activity.MainActivity.class));
+            Intent intent = new Intent(this, com.example.speakup.com.app.kids.activity.MainActivity.class);
+            startActivity(intent);
         });
 
     }

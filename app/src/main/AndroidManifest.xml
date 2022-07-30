@@ -4,6 +4,7 @@
     package="com.example.speakup">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SPEAKUP"
         tools:targetApi="31">
+
+        <activity android:name=".languageactivity"
+            android:exported="false"/>
+
+
+        <activity android:name=".Contact"
+            android:exported="false"/>
+
         <activity
             android:name=".gamelayout"
             android:exported="false" />
@@ -30,6 +39,10 @@
         <activity
             android:name=".Dashboard"
             android:exported="false" />
+
+        <activity android:name=".speakingactivity"
+            android:exported="false"/>
+
         <activity
             android:name=".IntroductoryActivity"
             android:exported="true">
@@ -50,13 +63,20 @@
         <activity android:name=".com.app.kids.activity.Drawing" />
         <activity android:name=".com.app.kids.activity.MyWorkShow" />
 
+<!--        <activity-->
+<!--            android:name=".org.uncopyrightedapps.games.memory_wod.activities.MainActivity"/>-->
+<!--        <activity-->
+<!--            android:name=".org.uncopyrightedapps.games.memory_wod.activities.PlayGameActivity"/>-->
+<!--        <activity-->
+<!--            android:name=".org.uncopyrightedapps.games.memory_wod.activities.AddHighScoreActivity"/>-->
+<!--        <activity-->
+<!--            android:name=".org.uncopyrightedapps.games.memory_wod.activities.ViewScoresActivity"/>-->
+
         <activity
             android:name=".org.uncopyrightedapps.games.memory_wod.activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="true"
-            android:label="@string/title_activity_play_game"
-            android:screenOrientation="portrait"
-            android:theme="@style/FullscreenTheme">
+            android:exported="false"
+            android:label="@string/title_activity_play_game">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -67,16 +87,13 @@
             android:name=".org.uncopyrightedapps.games.memory_wod.activities.PlayGameActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_play_game"
-            android:parentActivityName=".org.uncopyrightedapps.games.memory_wod.activities.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/FullscreenTheme" />
+            android:parentActivityName=".org.uncopyrightedapps.games.memory_wod.activities.MainActivity" />
         <activity
             android:name=".org.uncopyrightedapps.games.memory_wod.activities.AddHighScoreActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_add_high_score"
             android:parentActivityName=".org.uncopyrightedapps.games.memory_wod.activities.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/FullscreenTheme"
+
             android:windowSoftInputMode="stateVisible">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -86,7 +103,7 @@
             android:name=".org.uncopyrightedapps.games.memory_wod.activities.ViewScoresActivity"
             android:label="@string/title_activity_view_scores"
             android:parentActivityName=".org.uncopyrightedapps.games.memory_wod.activities.MainActivity"
-            android:theme="@style/FullscreenTheme">
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.uncopyrightedapps.games.memory_wod.activities.MainActivity" />

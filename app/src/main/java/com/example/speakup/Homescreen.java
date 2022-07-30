@@ -44,6 +44,7 @@ public class Homescreen extends AppCompatActivity {
                         return true;
 
                     case R.id.game:
+                        
                         startActivity(new Intent(Homescreen.this, gamelayout.class));
                         return true;
 
